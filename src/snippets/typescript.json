@@ -1,0 +1,72 @@
+{
+    "Print to console": {
+        "scope": "javascript,typescript",
+        "prefix": "~log",
+        "body": [
+            "console.log($1);"
+        ],
+        "description": "Log output to console"
+    },
+    "Node controller create": {
+        "scope": "javascript,typescript",
+        "prefix": "~apiadd",
+        "body": [
+            "const ${1}Add = async (req: Request, res: Response) => {",
+            "  try {",
+            "    const response = await ${1}Service.${1}Add(req);",
+            "    httpResponse.sendSuccess(res, response);",
+            "  } catch (err: any) {",
+            "    httpResponse.sendFailer(req, res, err, null);",
+            "  }",
+            "}"
+        ],
+        "description": []
+    },
+    "Node controller update": {
+        "scope": "javascript,typescript",
+        "prefix": "~apiupdate",
+        "body": [
+            "const ${1}Update = async (req: Request, res: Response) => {",
+            "  try {",
+            "    const ${1}Data = await ${1}Service.${1}Get(req);",
+            "    await ${1}Service.${1}Update(req, ${1}Data);",
+            "    httpResponse.sendSuccess(res);",
+            "  } catch (err: any) {",
+            "    httpResponse.sendFailer(req, res, err, null);",
+            "  }",
+            "}"
+        ],
+        "description": []
+    },
+    "Node controller delete": {
+        "scope": "javascript,typescript",
+        "prefix": "~apidelete",
+        "body": [
+            "const ${1}Delete = async (req: Request, res: Response) => {",
+            "  try {",
+            "    const ${1}Data = await ${1}Service.topicGet(req);",
+            "    await ${1}Service.${1}Delete(req, ${1}Data);",
+            "    httpResponse.sendSuccess(res);",
+            "  } catch (err: any) {",
+            "    httpResponse.sendFailer(req, res, err, null);",
+            "  }",
+            "}"
+        ],
+        "description": []
+    },
+    "Node controller get": {
+        "scope": "javascript,typescript",
+        "prefix": "~apiget",
+        "body": [
+            "const ${1}Get = async (req: Request, res: Response) => {",
+            "  try {",
+            "    const response = await ${1}Service.${1}Get(req);",
+            "    httpResponse.sendSuccess(res, response);",
+            "  } catch (err: any) {",
+            "    httpResponse.sendFailer(req, res, err, null);",
+            "  }",
+            "}"
+        ],
+        "description": []
+    }
+}
