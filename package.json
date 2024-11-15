@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/your-repo-name.git"
+    "url": "https://github.com/DeepSaeculumSolutions/code-snippet.git"
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
